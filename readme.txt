@@ -1,0 +1,52 @@
+=== Network Username Restrictions Override ===
+Contributors: dwc
+Tags: admin, authentication, network, wpmu, multisite
+Requires at least: 3.0
+Tested up to: 3.2.1
+Stable tag: 1.0
+
+Override restrictions on WordPress network usernames.
+
+== Description ==
+
+By default, WordPress network usernames cannot contain anything but lowercase letters and numbers. This plugin adds network options to let you include hyphens, underscores, or uppercase letters, if desired.
+
+Furthermore, this plugin gives you the option to allow email addresses as usernames, or to allow all-numeric usernames (e.g. "1234").
+
+Finally, this plugin lets you override the minimum length for usernames (which defaults to four characters).
+
+To follow updates to this plugin, visit:
+
+https://dev.webadmin.ufl.edu/~dwc/
+
+For help with this version, visit:
+
+https://dev.webadmin.ufl.edu/~dwc/2011/07/26/network-username-restrictions-override-1-0/
+
+== Installation ==
+
+1. Login as a network admin and navigate to the Network Admin panel.
+2. Upload the `network-username-restrictions-override` folder to your plugins folder, usually `wp-content/plugins`. (Or simply via the built-in installer.)
+3. Network Activate the plugin on the Plugins screen.
+4. Under Settings, enable any of the additional characters or formats for usernames.
+5. Add new users via the Users menu.
+
+== Frequently Asked Questions ==
+
+= Why do my usernames end up in lowercase letters when I use uppercase? =
+
+Unfortunately, the WordPress code for adding users forces usernames to lowercase without offering an option to configure it via a plugin.
+
+== Screenshots ==
+
+1. Plugin options
+
+== Changelog ==
+
+= 1.0 =
+* Initial release
+
+== Upgrade Notice ==
+
+= 1.0 =
+Initial release
