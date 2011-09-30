@@ -2,10 +2,10 @@
 /*
 Plugin Name: Network Username Restrictions Override
 Version: 1.0
-Plugin URI: https://dev.webadmin.ufl.edu/~dwc/2011/07/26/network-username-restrictions-override-1-0/
+Plugin URI: http://danieltwc.com/2011/network-username-restrictions-override-1-0/
 Description: Override some of the built-in restrictions in WordPress network usernames. Similar to the <a href="http://wordpress.org/extend/plugins/wpmu-blog-name-restrictions-override/">Blog Name Restrictions Override</a> plugin.
 Author: Daniel Westermann-Clark
-Author URI: https://dev.webadmin.ufl.edu/~dwc/
+Author URI: http://danieltwc.com/
 */
 
 class NetworkUsernameRestrictionsOverridePlugin {

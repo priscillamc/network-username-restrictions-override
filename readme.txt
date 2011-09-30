@@ -17,11 +17,11 @@ Finally, this plugin lets you override the minimum length for usernames (which d
 
 To follow updates to this plugin, visit:
 
-https://dev.webadmin.ufl.edu/~dwc/
+http://danieltwc.com/
 
 For help with this version, visit:
 
-https://dev.webadmin.ufl.edu/~dwc/2011/07/26/network-username-restrictions-override-1-0/
+http://danieltwc.com/2011/network-username-restrictions-override-1-0/
 
 == Installation ==
 
