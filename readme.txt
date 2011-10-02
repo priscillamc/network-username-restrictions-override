@@ -43,10 +43,16 @@ Unfortunately, the WordPress code for adding users forces usernames to lowercase
 
 == Changelog ==
 
+= 1.1 =
+* Add a check for super admins setting the minimum username length to longer than four characters
+
 = 1.0 =
 * Initial release
 
 == Upgrade Notice ==
+
+= 1.1 =
+Minor fix for username length check
 
 = 1.0 =
 Initial release

@@ -121,6 +121,14 @@ class NetworkUsernameRestrictionsOverridePlugin {
 			}
 		}
 
+		/*
+		 * If the super admin sets the minimum length to longer than four
+		 * characters, wpmu_validate_user_signup won't give us an error
+		 */
+		if (strlen($username) < $this->options['min_length']) {
+			$new_errors->add('user_name', __(sprintf('Username must be at least %d characters', $this->options['min_length'])));
+		}
+
 		$result['errors'] = $new_errors;
 
 		return $result;
