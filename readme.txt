@@ -45,6 +45,7 @@ Unfortunately, the WordPress code for adding users forces usernames to lowercase
 
 = 1.2 =
 * Remove use of call-time pass by reference to avoid warnings on PHP 5.3 and newer
+* Secondary username length check no longer causes an error when adding a username longer than the configured minimum
 
 = 1.1 =
 * Update plugin URIs
