@@ -9,13 +9,14 @@ Author URI: http://danieltwc.com/
 */
 
 class NetworkUsernameRestrictionsOverridePlugin {
-	var $db_version = 1;
+	var $db_version = 2;
 	var $option_name = 'network_username_restrictions_override_options';
 	var $options;
 	var $default_options = array(
 		'allow_email_addresses' => false,
 		'allow_numeric' => false,
 		'allow_hyphens' => false,
+		'allow_periods' => false,
 		'allow_underscores' => false,
 		'allow_uppercase' => false,
 		'min_length' => 4,
@@ -74,6 +75,7 @@ class NetworkUsernameRestrictionsOverridePlugin {
 							$allowed_characters = '';
 							if ($this->options['allow_hyphens']) $allowed_characters .= '-';
 							if ($this->options['allow_underscores']) $allowed_characters .= '_';
+							if ($this->options['allow_periods']) $allowed_characters .= '.';
 							if ($this->options['allow_uppercase']) $allowed_characters .= 'A-Z';
 
 							preg_match('/[' . $allowed_characters . 'a-z0-9]+/', $username, $maybe);
@@ -196,6 +198,7 @@ class NetworkUsernameRestrictionsOverridePlugin {
 				<td>
 					<label><input type="checkbox" id="allow_hyphens" name="network_username_restrictions_override_options[allow_hyphens]" value="1"<?php if ($this->options['allow_hyphens']): ?> checked="checked"<?php endif; ?> /> Allow hyphens</label><br />
 					<label><input type="checkbox" id="allow_underscores" name="network_username_restrictions_override_options[allow_underscores]" value="1"<?php if ($this->options['allow_underscores']): ?> checked="checked"<?php endif; ?> /> Allow underscores</label><br />
+					<label><input type="checkbox" id="allow_periods" name="network_username_restrictions_override_options[allow_periods]" value="1"<?php if ($this->options['allow_periods']): ?> checked="checked"<?php endif; ?> /> Allow periods</label><br />
 					<label><input type="checkbox" id="allow_uppercase" name="network_username_restrictions_override_options[allow_uppercase]" value="1"<?php if ($this->options['allow_uppercase']): ?> checked="checked"<?php endif; ?> /> Allow uppercase letters</label><br />
 					Note: WordPress converts usernames to lowercase. This option simply makes data entry easier.
 				</td>
@@ -219,6 +222,7 @@ class NetworkUsernameRestrictionsOverridePlugin {
 			'allow_numeric',
 			'allow_hyphens',
 			'allow_underscores',
+			'allow_periods',
 			'allow_uppercase',
 		);
 

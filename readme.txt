@@ -37,6 +37,10 @@ http://danieltwc.com/2011/network-username-restrictions-override-1-0/
 
 Unfortunately, the WordPress code for adding users forces usernames to lowercase without offering an option to configure it via a plugin.
 
+= I have site URLs based on the username. Why don't some of them load? =
+
+You'll have to update the regular expressions in your `.htaccess` file if you use email addresses or periods in usernames. These are not provided by default, and this plugin will not edit your `.htaccess` file automatically due to the rick involved.
+
 == Screenshots ==
 
 1. Plugin options
@@ -46,6 +50,7 @@ Unfortunately, the WordPress code for adding users forces usernames to lowercase
 = 1.2 =
 * Remove use of call-time pass by reference to avoid warnings on PHP 5.3 and newer
 * Secondary username length check no longer causes an error when adding a username longer than the configured minimum
+* Add support for periods in usernames
 
 = 1.1 =
 * Update plugin URIs
