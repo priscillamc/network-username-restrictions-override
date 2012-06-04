@@ -39,7 +39,7 @@ Unfortunately, the WordPress code for adding users forces usernames to lowercase
 
 = I have site URLs based on the username. Why don't some of them load? =
 
-You'll have to update the regular expressions in your `.htaccess` file if you use email addresses or periods in usernames. These are not provided by default, and this plugin will not edit your `.htaccess` file automatically due to the rick involved.
+You'll have to update the regular expressions in your `.htaccess` file if you use email addresses or periods in site URLs. The default WordPress `.htaccess` configuration does not allow them, nor will this plugin edit your `.htaccess` automatically due to the risk involved.
 
 == Screenshots ==
 
