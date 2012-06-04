@@ -61,6 +61,9 @@ You'll have to update the regular expressions in your `.htaccess` file if you us
 
 == Upgrade Notice ==
 
+= 1.2 =
+Really fix username length check this time; add support for periods in usernames
+
 = 1.1 =
 Minor fix for username length check
 
