@@ -22,22 +22,22 @@ class NetworkUsernameRestrictionsOverridePlugin {
 	);
 
 	function NetworkUsernameRestrictionsOverridePlugin() {
-		add_action('init', array(&$this, 'init'));
+		add_action('init', array($this, 'init'));
 	}
 
 	function init() {
 		$this->options = get_site_option($this->option_name);
 
 		if (is_admin()) {
-			add_action('admin_init', array(&$this, 'check_options'));
+			add_action('admin_init', array($this, 'check_options'));
 		}
 
-		add_action('wpmu_options', array(&$this, 'display_options'));
-		add_action('update_wpmu_options', array(&$this, 'update_options'));
-		add_filter('wpmu_validate_user_signup', array(&$this, 'validate_username'));
+		add_action('wpmu_options', array($this, 'display_options'));
+		add_action('update_wpmu_options', array($this, 'update_options'));
+		add_filter('wpmu_validate_user_signup', array($this, 'validate_username'));
 
 		// WordPress alters usernames in ways that don't match our overrides
-		add_filter('sanitize_user', array(&$this, 'sanitize_username'), 10, 3);
+		add_filter('sanitize_user', array($this, 'sanitize_username'), 10, 3);
 	}
 
 	/*
