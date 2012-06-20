@@ -1,9 +1,9 @@
 === Network Username Restrictions Override ===
 Contributors: dwc
 Tags: admin, authentication, network, wpmu, multisite
-Requires at least: 3.0
-Tested up to: 3.2.1
-Stable tag: 1.1
+Requires at least: 3.4
+Tested up to: 3.4
+Stable tag: 1.2
 
 Override restrictions on WordPress network usernames.
 
@@ -50,6 +50,7 @@ You'll have to update the regular expressions in your `.htaccess` file if you us
 = 1.2 =
 * Remove use of call-time pass by reference to avoid warnings on PHP 5.3 and newer
 * Secondary username length check no longer causes an error when adding a username longer than the configured minimum
+* Match error message with http://core.trac.wordpress.org/changeset/20441
 * Add support for periods in usernames
 
 = 1.1 =

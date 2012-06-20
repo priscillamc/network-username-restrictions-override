@@ -102,7 +102,7 @@ class NetworkUsernameRestrictionsOverridePlugin {
 							$new_errors->add($code, $message);
 						}
 					}
-					elseif ($message == __('Username must be at least 4 characters')) {
+					elseif ($message == __('Username must be at least 4 characters.')) {
 						// Check the username length
 
 						if (strlen($username) < $this->options['min_length']) {
@@ -128,7 +128,7 @@ class NetworkUsernameRestrictionsOverridePlugin {
 		 * characters, wpmu_validate_user_signup won't give us an error
 		 */
 		if (strlen($username) < $this->options['min_length']) {
-			$new_errors->add('user_name', __(sprintf('Username must be at least %d characters', $this->options['min_length'])));
+			$new_errors->add('user_name', __(sprintf('Username must be at least %d characters.', $this->options['min_length'])));
 		}
 
 		$result['errors'] = $new_errors;
