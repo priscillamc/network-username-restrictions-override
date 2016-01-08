@@ -1,7 +1,7 @@
 <?php
 /*
-Plugin Name: Network Username Restrictions Override
-Version: 1.2
+Plugin Name: Network Username Restrictions Override (patched)
+Version: 1.2-0.0.1
 Plugin URI: http://danieltwc.com/2011/network-username-restrictions-override-1-0/
 Description: Override some of the built-in restrictions in WordPress network usernames. Similar to the <a href="http://wordpress.org/extend/plugins/wpmu-blog-name-restrictions-override/">Blog Name Restrictions Override</a> plugin.
 Author: Daniel Westermann-Clark
@@ -63,7 +63,7 @@ class NetworkUsernameRestrictionsOverridePlugin {
 
 			if ($code == 'user_name') {
 				foreach ($messages as $message) {
-					if ($message == __('Only lowercase letters (a-z) and numbers are allowed.')) {
+					if ($message == __('Usernames can only contain lowercase letters (a-z) and numbers.')) {
 						// Check if we allow email addresses; otherwise, check against character overrides
 
 						if (is_email($username)) {
